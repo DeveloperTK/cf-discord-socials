@@ -1,0 +1,36 @@
+{
+  "name": "cf-discord-socials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development wrangler dev",
+    "miniflare": "NODE_ENV=development miniflare -k DATA worker/script.js",
+    "build": "NODE_ENV=development wrangler build",
+    "build:production": "NODE_ENV=production wrangler build",
+    "publish:production": "NODE_ENV=production wrangler publish -e production",
+    "logs:production": "wrangler tail -e production",
+    "test": "echo \"no tests specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Christian Schliz <code@foxat.de>",
+  "license": "SEE LICENSE IN JOE_MAMA.md",
+  "dependencies": {
+    "discord-interactions": "^2.3.0",
+    "rss-parser": "^3.12.0",
+    "workers-sentry": "0.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@cloudflare/wrangler": "^1.17.0",
+    "@sentry/webpack-plugin": "^1.16.0",
+    "babel-loader": "^8.2.2",
+    "deep-equal": "^2.0.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.30.0",
+    "miniflare": "^1.3.3",
+    "node-fetch": "^2.6.1",
+    "webpack": "^4.46.0"
+  }
+}

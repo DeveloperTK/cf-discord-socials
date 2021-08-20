@@ -1,0 +1,22 @@
+name = "cf-discord-socials-dev"
+type = "webpack"
+webpack_config = "webpack.config.js"
+account_id = "9e8f52a8c5264de5e77c5618d6dc32f9"
+workers_dev = true
+kv_namespaces = [
+	{ binding = "data", id = "invalid", preview_id = "invalid" }
+]
+
+# triggers for dev environment
+[triggers]
+crons = ["* * * * *"] # every minute
+
+[env.production]
+name = "cf-discord-socials"
+kv_namespaces = [
+	{ binding = "DATA", id = "9773ff21ab1146609013c13a8f2d705e" }
+]
+
+# allow different scheduling for production use
+[env.production.triggers]
+crons = ["* * * * *"] # every minute
